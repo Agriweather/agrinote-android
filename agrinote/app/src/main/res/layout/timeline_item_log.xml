@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="horizontal">
+
+    <com.github.vipulasri.timelineview.TimelineView
+        android:id="@+id/time_marker"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:line="@color/colorPrimary"
+        app:lineSize="3dp"
+        app:markerSize="20dp" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        app:cardElevation="1dp"
+        app:contentPadding="15dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_timeline_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        tools:text="24 JAN" />
+
+                    <TextView
+                        android:id="@+id/text_timeline_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@android:color/black"
+                        tools:text="[ 工作項目 ] : 病蟲害發現-苗立枯病" />
+                </LinearLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/attach_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/farm_corn_1"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="1dp" />
+
+                <ImageView
+                    android:id="@+id/update_image"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pen"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/expandable_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:el_duration="300"
+                app:el_expanded="false">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/colorLightGreen"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorLightGreen"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/log_photo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true"
+                            app:srcCompat="@drawable/corn_farm" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

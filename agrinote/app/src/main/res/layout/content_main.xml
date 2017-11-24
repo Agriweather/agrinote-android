@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="tw.com.agrinote.activity.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <LinearLayout
+        android:id="@+id/field_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="vertical">
+
+        <com.github.zagum.switchicon.SwitchIconView
+            android:id="@+id/status_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            app:si_animation_duration="500"
+            app:si_disabled_alpha=".3"
+            app:si_disabled_color="#b7b7b7"
+            app:si_enabled="false"
+            app:si_no_dash="true"
+            app:si_tint_color="#ff3c00"
+            app:srcCompat="@drawable/ic_farmer" />
+
+        <TextView
+            android:id="@+id/status_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#b7b7b7"
+            android:text="尚無任何農田資訊" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</android.support.constraint.ConstraintLayout>

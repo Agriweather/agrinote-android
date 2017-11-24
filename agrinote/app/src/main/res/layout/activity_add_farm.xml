@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                card_view:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:text="基本資料"
+                        android:textStyle="bold|italic" />
+
+                    <ImageView
+                        android:id="@+id/farm_img"
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/landscape_image" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorLightGreen"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/farm_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:hint="@string/label_farm_name"
+                                android:inputType="text" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/farm_land_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:hint="@string/label_land_id"
+                                android:inputType="text" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <TextView
+                            android:id="@+id/record_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:drawableRight="@drawable/ic_btn_calendar"
+                            android:gravity="center"
+                            android:text="2017-11-09 12:30:59.999"
+                            android:textColor="@android:color/black" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                card_view:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:orientation="vertical">
+
+                    <fragment xmlns:map="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/map"
+                        android:name="tw.com.agrinote.fragment.WorkaroundMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        map:cameraZoom="13"
+                        map:mapType="normal"
+                        tools:context="tw.com.agrinote.activity.AddFarmInfoActivity" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorLightGreen"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="5dp">
+
+                        <TextView
+                            android:id="@+id/latlng"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="5dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:drawableLeft="@android:drawable/ic_menu_mylocation"
+                            android:gravity="center"
+                            android:text="[ 23.1123, 122.123124]"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold|italic" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:hint="@string/label_position"
+                                android:inputType="date" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_dark"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+       >
+
+        <FrameLayout
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:padding="10dp"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/save_white" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:padding="10dp"
+            android:clickable="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/cancel_white" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/btn_delete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:padding="10dp"
+            android:clickable="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/delete_white" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">阿龜誌</string>
+
+    <string name="navigation_drawer_open">開啟</string>
+    <string name="navigation_drawer_close">關閉</string>
+
+    <string name="action_settings">設定</string>
+
+    <string name="label_email">Email</string>
+    <string name="label_password">密碼</string>
+    <string name="action_login">登入</string>
+    <string name="action_forget_password">忘記密碼 ?</string>
+    <string name="action_sign_up">註冊</string>
+
+    <string name="label_other_ways_login">或</string>
+    <string name="not_have_the_account_yet">還沒有帳號?</string>
+    <string name="signup">註冊吧</string>
+
+    <string name="label_comfirm_password">確認密碼</string>
+
+    <string name="label_farm_name">農田名稱</string>
+    <string name="label_land_id">地號</string>
+    <string name="label_sensor_id">感測器編號</string>
+    <string name="label_starting_date">開始耕作日期</string>
+    <string name="label_position">相近地址</string>
+    <string name="label_latitude">緯度</string>
+    <string name="label_longtitude">經度</string>
+    <string name="label_crop_name">作物名稱</string>
+
+    <string name="label_basic_info">基本資料</string>
+
+
+    <string name="add">新增</string>
+    <string name="remove">移除</string>
+    <string name="reset">重制</string>
+    <string name="toggle_snackbar">Toggle Snackbar</string>
+
+    <!--    Permissions    -->
+    <string name="permission_rationale_location">Access to the location service is required to demonstrate the \'my location\' feature, which shows your current location on the map.</string>
+    <string name="location_permission_denied">This sample requires location permission to enable the \'my location\' layer. Please try again and grant access to use the location.\nIf the permission has been permanently denied, it can be enabled from the System Settings &gt; Apps &gt; \'Google Maps API Demos\'.</string>
+    <string name="permission_required_toast">Location permission is required for this demo.</string>
+    <string name="error_location_provider"></string>
+</resources>

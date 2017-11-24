@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="5dp"
+    card_view:cardCornerRadius="4dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <ImageView
+                android:id="@+id/crop_icon"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                card_view:srcCompat="@drawable/corn" />
+
+            <TextView
+                android:id="@+id/start_date"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/calendar"
+                android:paddingLeft="2dp"
+                android:paddingTop="3dp"
+                android:text="20"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/crop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:text="玉米"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="229dp">
+
+            <TextView
+                android:id="@+id/day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_tag"
+                android:textColor="@color/colorPrimary"
+                android:maxLines="1"
+                android:text="15日前"
+                android:textSize="9sp"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_tag"
+                android:textColor="@color/colorPrimary"
+                android:marqueeRepeatLimit="-1"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:text="灌溉"
+                android:textSize="9sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

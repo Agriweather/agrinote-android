@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_login">
+
+
+    <com.victor.loading.rotate.RotateLoading
+        android:layout_gravity="center"
+        android:id="@+id/rotateloading1"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_centerInParent="true"
+        app:loading_speed="11"
+        app:loading_width="5dp" />
+
+    <com.victor.loading.rotate.RotateLoading
+        android:layout_gravity="center"
+        android:id="@+id/rotateloading2"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_centerInParent="true"
+        app:loading_speed="11"
+        app:loading_width="5dp" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@mipmap/icon"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:text="Copyright © 2017 AgriWeather Teams " />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:text="All Rights Reserved." />
+    </LinearLayout>
+
+
+</FrameLayout>

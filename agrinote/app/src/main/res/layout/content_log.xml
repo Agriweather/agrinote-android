@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="tw.com.agrinote.activity.LogActivity"
+    tools:showIn="@layout/activity_log">
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_gravity="top"
+        app:ci_animator="@animator/indicator_no_animator"
+        app:ci_drawable="@drawable/white_radius"
+        app:ci_drawable_unselected="@drawable/black_radius" />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@android:color/holo_green_dark">
+
+        <FrameLayout
+            android:id="@+id/pager_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/imageButton"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="10dp"
+                app:srcCompat="@drawable/back_white" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/pager_forward"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end"
+                android:layout_margin="10dp"
+                app:srcCompat="@drawable/next_white" />
+        </FrameLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                card_view:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="10dp"
+                        android:text="基本資料"
+                        android:textStyle="bold|italic" />
+
+                    <ImageView
+                        android:id="@+id/img_log"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:padding="10dp"
+                        app:srcCompat="@drawable/landscape_image" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorLightGreen"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/record_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_btn_calendar"
+                            android:gravity="center"
+                            android:text="2017-11-09 12:30:59.999"
+                            android:textColor="@android:color/black" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                card_view:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="10dp"
+                        android:text="工作紀錄"
+                        android:textStyle="bold|italic" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:background="@color/colorLightGreen"/>
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_dark"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        >
+
+        <FrameLayout
+            android:id="@+id/btn_add_record"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:padding="10dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_recording" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:padding="10dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/save_white" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/cancel_white" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/btn_delete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/delete_white" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>
